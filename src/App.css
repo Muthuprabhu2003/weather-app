@@ -1,38 +1,163 @@
-.App {
+.weather-app {
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* Seasonal Backgrounds */
+.bg-sunny {
+  background: linear-gradient(to right, #ffe259, #ffa751);
+}
+
+.bg-rainy {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.bg-cloudy {
+  background: linear-gradient(to right, #d7d2cc, #304352);
+}
+
+.bg-default {
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  background-color: #ffffff30;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #ffffff50;
+}
+
+.error {
+  color: #fff;
+  text-align: center;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.top-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.icon-temp {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sun {
+  color: #ffd700;
+}
+.cloud {
+  color: #ccc;
+}
+.rain {
+  color: #00bfff;
+}
+.snow {
+  color: #aad;
+}
+.storm {
+  color: #800080;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon-temp h2 {
+  font-size: 48px;
+  margin: 0.5rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-temp p {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feels-like {
+  font-size: 14px;
+  color: #f1f1f1a6;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.info-box h4 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.ads-card {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-align: center;
 }
