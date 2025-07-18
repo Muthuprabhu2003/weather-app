@@ -28,7 +28,6 @@ A modern, responsive Weather Forecast Web App built using **ReactJS**, displayin
 ## 🛠️ Built With
 
 - [ReactJS](https://reactjs.org/)
-- [OpenWeatherMap API](https://openweathermap.org/api)
 - [Vercel](https://vercel.com/) 
 
 ---
